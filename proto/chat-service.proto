@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+package proto;
+
+
+service ChatService {
+    // createUser rpc
+    rpc chat( stream Request) returns (stream Response){};
+
+
+
+
+}
+
+message Request{
+    string message=1;
+}
+
+message Response{
+    string message=1;
+}
+
+
+
+// protoc proto/pdf.proto --go_out=plugins=grpc:.
+
+
+
+
